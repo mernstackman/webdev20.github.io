@@ -1,1 +1,136 @@
-Hello World
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Mass Unfollow : mass follow, mass unfollow, twitter, followers">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Mass Unfollow</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/webdev20">View on GitHub</a>
+
+          <h1 id="project_title">Mass Unfollow</h1>
+          <h2 id="project_tagline">mass follow, mass unfollow, twitter, followers</h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a id="-free-mass-follow-unfollow-php-script-to-help-you-manage-your-twitter-account" class="anchor" href="#-free-mass-follow-unfollow-php-script-to-help-you-manage-your-twitter-account" aria-hidden="true"><span class="octicon octicon-link"></span></a># Free Mass Follow Unfollow PHP Script To Help You Manage Your Twitter Account</h3>
+
+<h2>
+<a id="simple-and-ugly-but-powerful-tool" class="anchor" href="#simple-and-ugly-but-powerful-tool" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simple and ugly but powerful tool!</h2>
+
+<h3>
+<a id="installation-instruction" class="anchor" href="#installation-instruction" aria-hidden="true"><span class="octicon octicon-link"></span></a>INSTALLATION INSTRUCTION</h3>
+
+<p><strong>This script can be used both on live server or on your own computer using xampp or any other similar software.</strong></p>
+
+<p>[Step by step installation:]</p>
+
+<ol>
+<li>
+<p>Create twitter app account here <a href="https://apps.twitter.com/app/new">https://apps.twitter.com/app/new</a>. You will need phone verified twitter account in order to make an app. Fill in your app detail in the form on that page.</p>
+
+<ul>
+<li><p>Name: Give name to your app.</p></li>
+<li><p>Description: Give your app a description.</p></li>
+<li><p>Website: The home page url you are going to use for the app. For example: "<a href="http://example.com/yourapp">http://example.com/yourapp</a>", where "yourapp" on that url is the name of directory where you upload this script. /<em>If you have no hosting account and want to use your computer to run this app, then use this domain instead: "<a href="http://127.0.0.1/yourapp/">http://127.0.0.1/yourapp/</a>"</em>/</p></li>
+<li><p>Callback url: This is the url where the user of your app (you) will be redirected back after successfully login/ authorize app to twitter. Make sure it contains "callback.php" at the end of the url. Example: "<a href="http://example.com/yourapp/callback.php">http://example.com/yourapp/callback.php</a>". Or "<a href="http://127.0.0.1/yourapp/callback.php">http://127.0.0.1/yourapp/callback.php</a>" if you are going to use your computer.</p></li>
+</ul>
+</li>
+<li>
+<p>Editing the config file
+Extract the zip file of this script on your computer. Find a file named "config.php" inside, open it up using text editor such as notepad and find the following lines:</p>
+
+<pre><code>    define('CONSUMER_KEY', 'YOUR_APP_CONSUMER_KEY');
+    define('CONSUMER_SECRET', 'YOUR_APP_SECRET_KEY');
+    define('OAUTH_CALLBACK', 'YOUR_APP_CALLBACK_URL');
+</code></pre>
+</li>
+</ol>
+
+<p>Change the followings:
+"YOUR_APP_CONSUMER_KEY" with your app Consumer Key (API Key).
+"YOUR_APP_SECRET_KEY" with your app Consumer Secret (API Secret).
+and
+"YOUR_APP_CALLBACK_URL" with callback URL you previously set when creating the app.</p>
+
+<p>You can find your app Consumer Key (API Key) and Consumer Secret (API Secret) on "Keys and Access Tokens" section on your app managament panel.</p>
+
+<p>Save it and upload the entire script to your server.</p>
+
+<ol>
+<li>Uploading to server
+If you are using xampp, then create a folder in a directory called "htdocs" and locate the script inside the directory you created. You can download xampp here <a href="https://www.apachefriends.org/index.html">https://www.apachefriends.org/index.html</a>. </li>
+</ol>
+
+<p>If you are using live server, then you can upload the script anywhere inside your site main directory/ root folder.</p>
+
+<p>Make sure that you chmod the directory where you put this script to "755".</p>
+
+<p>If you still need help or support for installation, then you can contact me here: <a href="https://www.fiverr.com/satria1/php-wordpress-fb-app-programming-service">https://www.fiverr.com/satria1/php-wordpress-fb-app-programming-service</a></p>
+
+<p><strong><em>HOW TO USE?</em></strong></p>
+
+<p>This tool is simple and self explanatory. But here is the guide if you still doubt about how to use it.</p>
+
+<p>I. Initialize The App</p>
+
+<ol>
+<li><p>Open the main app url, it is where you uploaded this script.
+If you upload your this app script inside a folder called "yourapp", then the main app url would be like this: "<a href="http://yoursite.com/yourapp">http://yoursite.com/yourapp</a>", where "<a href="http://yoursite.com/">http://yoursite.com/</a>" will be your site domain and "yourapp" is the folder name inside your site where you uploaded the script.
+If you are using local server, then the url will be , example: <a href="http://127.0.0.1/yourapp">http://127.0.0.1/yourapp</a>.</p></li>
+<li><p>Check "I Agree" and click the showed "Connect To Twitter?" button.</p></li>
+<li><p>Click "Sign In" button after you are being prompted to the twitter app authentication page. You will then being redirected back to your app home page.
+If the authentication is failed and bring you back to connect confirmation page, then just repeat the point 2 above until you are being redirected back to your app home page.</p></li>
+</ol>
+
+<p>II. Mass Follow
+This feature is used to follow any user's followers.
+Fields value:
+1. Followers of: User's account screen name/ you want their follower accounts to be followed by your account. 
+Example: "@username" or "username".</p>
+
+<ol>
+<li>Max Following: The maximum number of accounts you want to follow. It can't be more than 5000.</li>
+</ol>
+
+<p>Click the "Follow" button to start and wait until the process is finished. You can check your account to see that the number of your followings is increased.</p>
+
+<p>III. Mass Unfollow
+This feature is used to mass unfollow your followings who are not following you back.
+Type the number of users you want to unfollow in the text field. It's value should be number. And then click the "Unfollow" button to start. Wait until the process is finished.</p>
+
+<p>While processing, either you are doing mass following or mass unfollowing, the app page will be blocked by black cover to prevent process interference.</p>
+
+<p>IV. Change Twitter Account
+You can change twitter account you want to manage by logout from your current twitter account and then login to another account you want to use with this app. Next, logout from your app by clicking the logout button located on the upright corner and then do the authentication like you did with your previous account.</p>
+
+<p>That's it!</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
