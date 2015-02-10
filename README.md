@@ -2,7 +2,7 @@
 Free Mass Follow Unfollow PHP Script To Help You Manage Your Twitter Account
 
 /*
-TWITTER MASS FOLLOW UNFOLLOW
+TWITTER MASS FOLLOW UNFOLLOW |
 Simple and ugly but powerful tool! Get to know how to use it wisely!
 */
 
